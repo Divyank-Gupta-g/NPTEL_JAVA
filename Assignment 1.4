@@ -1,0 +1,25 @@
+//check whether the number is an Armstrong number or not.
+
+import java.util.Scanner;
+
+public class Exercise1_4 {
+    public static void main(String[] args) {
+	      Scanner sc = new Scanner(System.in);
+	      int n=sc.nextInt();
+        int result=0;
+
+        //Use while loop check the number is Armstrong or not.
+        int sum = 0;
+        while(n!=0){
+            int i = n%10;
+            sum += Math.pow(i, 3);
+            n = n/10;
+        }
+
+        //store the output(1 or 0) in result variable.
+        if(sum==n){
+            result = 1;
+        }
+        System.out.print(result);
+    }
+}
